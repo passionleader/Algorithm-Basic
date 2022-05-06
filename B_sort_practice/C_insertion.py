@@ -30,14 +30,14 @@ for last in range(1, n):
     key = L[last]  # compare & insert this!
 
     # insert 될 index 찾기
-    for arr in range(last, 0, -1):
-        if key < L[arr - 1]:
-            insert_index = arr - 1  # insertable index
+    for arr in range(last - 1, -1, -1):  # 0까지 (-1까지 아님 주의)
+        if key < L[arr]:
+            insert_index = arr  # insertable index
             # L[arr+1] = L[arr]  # shift for insert => 이해를 돕기 위해 이동 및 삽입은 하단에 반복문 분리
     print('{} -> ({})'.format(key, insert_index))
 
     # 이동 및 삽입
-    for arr in range(last, insert_index, -1):
+    for arr in range(last, insert_index, -1):  # 거꾸로 한칸씩 이동
         L[arr] = L[arr-1]
     L[insert_index] = key
 
