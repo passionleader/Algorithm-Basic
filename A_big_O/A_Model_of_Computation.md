@@ -1,4 +1,4 @@
-#시간복잡도
+# 시간복잡도
 ### Random Access Memory
 #### 상수 시간 Θ(1)에 할 수 있는 일
 * load word r(i) into register r(j)
@@ -12,7 +12,7 @@
 <hr>
 <br>
 
-###pointer machine
+### pointer machine
 #### 동적 할당된 객체
 * 하나의 필드는 O(1) 속성 1개를 가짐
 * 속성: word 혹은 pointer 혹은 null 값을 가짐
@@ -22,7 +22,7 @@
 <hr>
 <br>
 
-###python model
+### python model
 #### python에서는 RAM, Pointer machine 둘다 상수시간에 처리 가능하다
 * RAM (=List)
   * L[i] = L[j] + 5 => 상수 시간 Θ(1)
