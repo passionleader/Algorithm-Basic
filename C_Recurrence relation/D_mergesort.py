@@ -12,7 +12,7 @@ logn번 쪼개기  * n번 비교하기 => O(nlogn)
 
 # Merge Sort (divide and sort-merge)
 def mergeSort(unsorted):
-    # don't need to sort
+    # cannot divide any more
     if len(unsorted) <= 1:
         return unsorted
 
@@ -20,8 +20,12 @@ def mergeSort(unsorted):
     LL = unsorted[:len(unsorted) // 2]
     RL = unsorted[len(unsorted) // 2:]
 
-    # recurrence call and sort-merge
-    return merge(mergeSort(LL), mergeSort(RL))
+    # recurrence call(무한(n)일 경우, log n회 반복 divide - sort - merge)
+    sortedLL = mergeSort(LL)
+    sortedRR = mergeSort(RL)
+
+    # and sort-merge
+    return merge(sortedLL, sortedRR)
 
 
 # Merge (sort & merge)
