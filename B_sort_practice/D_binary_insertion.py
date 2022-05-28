@@ -22,7 +22,7 @@ print(L)
 for last in range(1, n):
     key = L[last]  # compare & insert this!
 
-    # insert 될 index 찾기
+    # insert 될 index 찾기(이진 검색)
     low = 0
     high = last
     while low < high:
